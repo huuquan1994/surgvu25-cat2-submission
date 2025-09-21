@@ -1,0 +1,12 @@
+--index-url https://download.pytorch.org/whl/cu118
+torch==2.7.0
+torchvision==0.22.0
+torchaudio==2.7.0
+
+transformers==4.53.3
+decord==0.6.0
+accelerate==1.10.0
+bitsandbytes==0.47.0
+opencv-python-headless==4.12.0.88
+albumentations==2.0.4
+nltk
