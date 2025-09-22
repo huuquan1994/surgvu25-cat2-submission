@@ -4,12 +4,12 @@
 **Team**: Capybara <br>
 **Member**: Quan Huu Cap <br>
 **Affiliation:**: [Aillis, Inc.](https://aillis.jp/), Tokyo, Japan <br>
+**Solution Report**: [Link](solution_report/Team_Capybara_report.pdf)
 
 ### Required env
-- Ubuntu
+- Ubuntu with Docker
 - Python 3.10
 - CUDA 11.8
-- CuDNN 9
   
 ### Installation
 ```bash
@@ -17,7 +17,7 @@ pip install --no-cache-dir -r requirements.txt
 ```
 
 ### Video pre-processing
-For each video frame, the black margins on the left and right were cropped, and the tool list area at the bottom was either cropped or obscured using Gaussian blur. 
+For each video frame, the black margins on the left and right were cropped, and the tool list area at the bottom was either cropped or obscured using Gaussian blur. See [utils_llava_ov.py](task2_runtime/utils_llava_ov.py) for details.
 
 ### Models download
 See [Models prepration](Models/README.md) for more details.
@@ -41,6 +41,7 @@ BLEU: 1.0
 Some answers in the [public sample set (11 videos)](https://surgvu25.grand-challenge.org/data-description/) are wrong and need correction. I corrected them myself to validate the method. Feel free to download them at ([GDrive - Corrected Videos](https://drive.google.com/file/d/17sOEzW8FI9VJxY0yapWDtCjXM-91aNI2/view?usp=sharing))
 
 ### Build docker image
+Double check the [Dockerfile](Dockerfile) before running this command.
 ```bash
 docker build --platform=linux/amd64 -t surgvu25-cat2-submit:ov-tools-organs-5fr .
 ```
