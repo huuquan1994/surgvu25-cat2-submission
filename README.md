@@ -10,7 +10,10 @@
 - Ubuntu with Docker
 - Python 3.10
 - CUDA 11.8
-  
+
+### Models download
+Download all trained models to the `Models` directory. See [Models prepration](Models/README.md) for instructions. 
+
 ### Installation
 ```bash
 pip install --no-cache-dir -r requirements.txt
@@ -18,9 +21,6 @@ pip install --no-cache-dir -r requirements.txt
 
 ### Video pre-processing
 For each video frame, the black margins on the left and right were cropped, and the tool list area at the bottom was either cropped or obscured using Gaussian blur. See [utils_llava_ov.py](task2_runtime/utils_llava_ov.py) for details.
-
-### Models download
-See [Models prepration](Models/README.md) for more details.
 
 ### Inference
 The inference example is as follows:
@@ -38,7 +38,8 @@ BLEU: 1.0
 ```
 
 ### Corrected version: Category 2 sample set (11 videos)
-Some answers in the [public sample set (11 videos)](https://surgvu25.grand-challenge.org/data-description/) are wrong and need correction. I corrected them myself to validate the method. Feel free to download them at ([GDrive - Corrected Videos](https://drive.google.com/file/d/17sOEzW8FI9VJxY0yapWDtCjXM-91aNI2/view?usp=sharing))
+Some answers in the [public sample set (11 videos)](https://surgvu25.grand-challenge.org/data-description/) are wrong and need correction. I corrected them myself to validate the method. Feel free to download them at ([GDrive - Corrected Videos](https://drive.google.com/file/d/17sOEzW8FI9VJxY0yapWDtCjXM-91aNI2/view?usp=sharing)).  
+This data was used to evaluate the BLEU score locally.  
 
 ### Build docker image
 Double check the [Dockerfile](Dockerfile) before running this command.
