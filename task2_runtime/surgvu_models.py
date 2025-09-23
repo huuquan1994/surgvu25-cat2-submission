@@ -53,7 +53,7 @@ class OrganClassifier(nn.Module):
             print(e)
             raise e
 
-        # replace final layer with num_classes=12
+        # replace final layer with num_classes=8
         num_classes = 8
         if "efficientnet_" in model_name:
             num_ftrs = self.model.classifier[1].in_features
