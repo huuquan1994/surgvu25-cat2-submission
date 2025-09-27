@@ -5,6 +5,7 @@
     git clone https://huggingface.co/llava-hf/llava-onevision-qwen2-7b-ov-hf
 
     # remove .git in llava-onevision-qwen2-7b-ov-hf to reduce size for docker image
+    cd llava-onevision-qwen2-7b-ov-hf
     rm -rf .git
     ```
 
